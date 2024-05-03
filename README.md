@@ -1,31 +1,50 @@
-# ansible_terraform_config
+# Ansible Terraform Config
 
-#### Appendix
+This repository contains the Terraform code to provision VM on the different cloud providers.
 
-Usefull command to test the Terraform provisioning locally.
+This repository is part of the 
+[Ansible Terraform Cloud VM Deployment Demo](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
 
-* Initialized the current working directory
+#### How to run the terraform provisionning localy
+
+###### Prerequisite
+* Terraform cli
+
+
+###### Steps
+1. Enter the proper value in the terraform.tfvars file.
+
+
+1. Initialized the current working directory
     ```
         terraform init
     ```
-* Get a preview of what the code will do
+1. Get a preview of what the code will do
     ```
     terraform plan -var-file="terraform.tfvars"
     ```
-* Apply the desired changes
+1. Apply the desired changes
     ```
     terraform apply -var-file="terraform.tfvars" -auto-approve
     ```
-* Destroy what you just created
+
+1. :warning: Extra steps to destroy what you just created
+```
+terraform destroy -var-file="terraform.tfvars" -auto-approve
+```
+
+---
+
+Encrypt and Decrypt the important file in `Ansible Vault`
+
+* __Encrypt__
     ```
-    terraform destroy -var-file="terraform.tfvars" -auto-approve
+    ansible-vault encrypt terraform.tfstate terraform.tfstate.backup terraform.tfvars
     ```
 
-
-
-ansible-vault decrypt terraform.tfstate terraform.tfstate.backup terraform.tfvars
-
-ansible-vault encrypt terraform.tfstate terraform.tfstate.backup terraform.tfvars
-
+* __Decrypt__
+    ```
+    ansible-vault decrypt terraform.tfstate terraform.tfstate.backup terraform.tfvars
+    ```
 
 ---
