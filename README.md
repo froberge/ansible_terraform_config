@@ -10,15 +10,15 @@ Usefull command to test the Terraform provisioning locally.
     ```
 * Get a preview of what the code will do
     ```
-    terraform plan -var-file="local.tfvars"
+    terraform plan -var-file="terraform.tfvars"
     ```
 * Apply the desired changes
     ```
-    terraform apply -var-file="local.tfvars" -auto-approve
+    terraform apply -var-file="terraform.tfvars" -auto-approve
     ```
 * Destroy what you just created
     ```
-    terraform destroy -var-file="local.tfvars" -auto-approve
+    terraform destroy -var-file="terraform.tfvars" -auto-approve
     ```
 
 
