@@ -8,9 +8,9 @@ resource "aws_vpc" "main" {
   }
 }
 
-resource "aws_internet_gateway" "gateway" {
-  vpc_id = aws_vpc.main.id  
-}
+# resource "aws_internet_gateway" "gateway" {
+#   vpc_id = aws_vpc.main.id  
+# }
 
 resource "aws_subnet" "main" {
   vpc_id = aws_vpc.main.id
@@ -18,18 +18,18 @@ resource "aws_subnet" "main" {
   availability_zone = "${data.aws_region.current.name}a"
 }
 
-resource "aws_route_table" "route_table" {
- vpc_id = aws_vpc.main.id
- route {
-   cidr_block = "0.0.0.0/0"
-   gateway_id = aws_internet_gateway.gateway.id
- }
-}
+# resource "aws_route_table" "route_table" {
+#  vpc_id = aws_vpc.main.id
+#  route {
+#    cidr_block = "0.0.0.0/0"
+#    gateway_id = aws_internet_gateway.gateway.id
+#  }
+# }
 
-resource "aws_route_table_association" "route_table_association" {
- subnet_id      = aws_subnet.main.id
- route_table_id = aws_route_table.route_table.id
-}
+# resource "aws_route_table_association" "route_table_association" {
+#  subnet_id      = aws_subnet.main.id
+#  route_table_id = aws_route_table.route_table.id
+# }
 
 # resource "tls_private_key" "key" {
 #   algorithm = "RSA"
@@ -80,8 +80,8 @@ resource "aws_security_group" "allow_http" {
 
 resource "aws_instance" "server" {
   count = "1"
-  ami = var.ami
   instance_type = var.instance_type
+  ami = var.ami
   key_name = "ansible_terraform_demo"
   associate_public_ip_address = true
   subnet_id = aws_subnet.main.id
