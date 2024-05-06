@@ -13,8 +13,7 @@ variable "network_interface_id" {
 
 variable "ami" {
     type = string
-    #default = "ami-0d77c9d87c7e619f9"
-    default = "ami-098f16afa9edf40be"
+    default = "ami-0d77c9d87c7e619f9"
 }
 
 variable "instance_type" {
