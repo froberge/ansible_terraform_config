@@ -31,14 +31,14 @@ resource "aws_route_table_association" "route_table_association" {
  route_table_id = aws_route_table.route_table.id
 }
 
-resource "tls_private_key" "key" {
-  algorithm = "RSA"
-}
+# resource "tls_private_key" "key" {
+#   algorithm = "RSA"
+# }
 
-resource "aws_key_pair" "aws_key" {
-  key_name = "ansible-ssh-key"
-  public_key = tls_private_key.key.public_key_openssh
-}
+# resource "aws_key_pair" "aws_key" {
+#   key_name = "ansible-ssh-key"
+#   public_key = tls_private_key.key.public_key_openssh
+# }
 
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"
@@ -82,7 +82,7 @@ resource "aws_instance" "server" {
   count = "1"
   ami = var.ami
   instance_type = var.instance_type
-  key_name = aws_key_pair.aws_key.key_name
+  key_name = "ansible_terraform_demo"
   associate_public_ip_address = true
   subnet_id = aws_subnet.main.id
   vpc_security_group_ids = [aws_security_group.allow_ssh.id, aws_security_group.allow_http.id]
