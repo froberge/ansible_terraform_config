@@ -1,3 +1,8 @@
+variable "webserver_count" {
+  type = number
+  default = 3
+}
+
 variable "access_key" {
     type = string
 }
@@ -16,13 +21,27 @@ variable "ami" {
     default = "ami-0d77c9d87c7e619f9"
 }
 
-variable "instance_type" {
-    type = string
-    default = "t2.micro"
+variable "key_instance_name" {
+  type = string
+  default = "ansible_terraform_demo"
 }
 
-# below we define the default server names
-variable "instance_tags" {
-  type = list(string)
-  default = ["tf-ansible-1"]
+variable "instance_name_lb" {
+  type = string
+  default = "demo_lb_server"
+}
+
+variable "instance_name_webserver" {
+  type = string
+  default = "demo_web_server"
+}
+
+variable "project_name" {
+  type = string
+  default = "Ansible_Terraform_Demo"
+}
+
+variable "instance_env" {
+  type = string
+  default = "dev"
 }
