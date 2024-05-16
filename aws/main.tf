@@ -118,6 +118,6 @@ resource "aws_instance" "webserver" {
       Owner = "froberge",
       type =  "${var.instance_env}_web",
       project =  var.project_name
-      provider: "AWS"
+      provider: "aws"
     }
 }
