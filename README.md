@@ -5,7 +5,7 @@ This repository contains the Terraform code to provision VM on the different clo
 This repository is part of the 
 [Ansible Terraform Cloud VM Deployment Demo](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
 
-#### How to run the terraform provisionning localy
+#### How to run the terraform provisioning localy
 
 ###### Prerequisite
 * Terraform cli
