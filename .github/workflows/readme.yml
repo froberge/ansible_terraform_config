@@ -12,7 +12,9 @@ jobs:
       run:
         working-directory: /docs
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          sparse-chekout: 'docs/'
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
