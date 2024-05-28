@@ -12,7 +12,7 @@ Ce référentiel fait partie du[Démo de déploiement de VM Ansible Terraform Cl
 
 ###### Pas
 
-1.  Enter the proper value in the terraform.tfvars file.
+1.  Entrez la valeur appropriée dans le fichier terraform.tfvars.
 
 
 1.  Initialisé le répertoire de travail actuel
@@ -24,7 +24,7 @@ Ce référentiel fait partie du[Démo de déploiement de VM Ansible Terraform Cl
 3.  Appliquer les modifications souhaitées
         terraform apply -var-file="terraform.tfvars" -auto-approve
 
-4.  :warning: Extra steps to destroy what you just created
+4.  :avertissement : étapes supplémentaires pour détruire ce que vous venez de créer
 
 
     terraform destroy -var-file="terraform.tfvars" -auto-approve
