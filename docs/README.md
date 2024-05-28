@@ -1,3 +1,4 @@
+:fr:[Français](README.fr.md)
 # Ansible Terraform Config
 
 This repository contains the Terraform code to provision VM on the different cloud providers.
