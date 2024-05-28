@@ -1,26 +1,28 @@
 # Ansible Terraform Config
-Read this in other languages: :fr:[French/Français](README.fr.md)
+Read this in other languages: :fr:[ French/Français](README.fr.md)
 
 ---
 
 This repository contains the Terraform code to provision VM on the different cloud providers.
 
-This repository is part of the 
-[Ansible Terraform Cloud VM Deployment Demo](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
+This repository is part of the [Ansible Terraform Cloud VM Deployment Demo](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
 
 #### How to run the terraform provisioning localy
 
 ###### Prerequisite
 * Terraform cli
-
+* :warning: __FORK The repository to encrypt your own files__
 
 ###### Steps
-1. Enter the proper value in the terraform.tfvars file.
-
+1. Enter the proper value in the terraform.tfvars file. 
+```
+access_key = ""
+secret_key = ""
+```
 
 1. Initialized the current working directory
     ```
-        terraform init
+    terraform init
     ```
 1. Get a preview of what the code will do
     ```

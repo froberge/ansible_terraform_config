@@ -1,21 +1,26 @@
 # Ansible Terraform Config
-Lisez ceci dans d'autres langues: :us:[English/Anglais](README.md)
+Lisez ceci dans d'autres langues: :us:[ English/Anglais](README.md)
 
 ---
 
 Ce référentiel contient le code Terraform pour provisionner la VM sur les différents fournisseurs de cloud.
 
-Ce référentiel fait partie du[Démo de déploiement de VM Ansible Terraform Cloud](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
+Ce référentiel fait partie du [Démo de déploiement de VM Ansible Terraform Cloud](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
 
 #### Comment exécuter le provisionnement Terraform localement
 
 ###### Prérequis
 
--   CLI Terraform
+- CLI Terraform
+- :warning: __FORK Le référentiel pour chiffrer vos propres fichiers__
 
-###### Pas
+###### Étapes
 
 1.  Entrez la valeur appropriée dans le fichier terraform.tfvars.
+```
+access_key = ""
+secret_key = ""
+```
 
 
 1.  Initialisé le répertoire de travail actuel
