@@ -1,4 +1,7 @@
-# Configuration Terraform Ansible
+# Ansible Terraform Config
+Lisez ceci dans d'autres langues: :us:[English/Anglais](README.md)
+
+---
 
 Ce référentiel contient le code Terraform pour provisionner la VM sur les différents fournisseurs de cloud.
 
