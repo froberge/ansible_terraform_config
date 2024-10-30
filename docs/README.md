@@ -1,8 +1,4 @@
 # Ansible Terraform Config
-Read this in other languages: :fr:[ French/Français](README.fr.md)
-
----
-
 This repository contains the Terraform code to provision VM on the different cloud providers.
 
 This repository is part of the [Ansible Terraform Cloud VM Deployment Demo](https://github.com/froberge/ansible_terraform_cloud_vm_deployment)
