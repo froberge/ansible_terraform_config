@@ -1,7 +1,7 @@
-variable "webserver_count" {
-  type = number
-  default = 3
-}
+# variable "webserver_count" {
+#   type = number
+#   default = 1
+# }
 
 variable "access_key" {
     type = string
