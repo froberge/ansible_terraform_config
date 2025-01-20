@@ -1,6 +1,5 @@
 variable "webserver_count" {
   type = number
-  # default = 1
 }
 
 variable "access_key" {
@@ -28,20 +27,20 @@ variable "key_instance_name" {
 
 variable "instance_name_lb" {
   type = string
-  default = "demo_lb_server"
+  # default = "demo_lb_server"
 }
 
 variable "instance_name_webserver" {
   type = string
-  default = "demo_web_server"
+  # default = "demo_web_server"
 }
 
 variable "project_name" {
   type = string
-  default = "Ansible_Terraform_Demo"
+  # default = "Ansible_Terraform_Demo"
 }
 
 variable "instance_env" {
   type = string
-  default = "dev"
+  # default = "dev"
 }
